@@ -1,0 +1,8 @@
+---
+permalink: "/stylesheet.css"
+---
+{% for data in fictionalTestData -%}
+.teaser:has(a[href$="/{{data.about}}"]) {
+    background-color: red;
+}
+{%- endfor %}    

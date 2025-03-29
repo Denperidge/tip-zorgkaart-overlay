@@ -16,5 +16,16 @@ export default {
             out[about].push({rating, comment})
         })
         return out;
+    },
+    totalRatingById: (data) => {
+        const out = {};
+        data.fictionalTestData.forEach((entry) => {
+            const { about, rating } = entry; 
+            if (!Object.keys(out).includes(about)) {
+                out[about] = 0;
+            }
+            out[about] += rating;
+        })
+        return out;
     }
 }

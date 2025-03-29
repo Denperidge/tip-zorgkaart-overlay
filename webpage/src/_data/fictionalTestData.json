@@ -13,5 +13,15 @@
         "about": "caw-de-kempen",
         "rating": -1,
         "comment": "This is a negative comment, with a value of -1"
+    },
+    {
+        "about": "caw-de-kempen",
+        "rating": -1,
+        "comment": "Another negative comment, with a value of -1"
+    },
+    {
+        "about": "caw-de-kempen",
+        "rating": 1,
+        "comment": "And now a positive one, +1"
     }
 ]

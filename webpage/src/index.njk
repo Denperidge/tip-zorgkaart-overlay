@@ -9,6 +9,7 @@
     {% for about in allAbout %}
         <article id="{{ about }}-%>">
             <h2>{{ about }}</h2>
+            <p>{{ totalRatingById[about] }}</p>
             <section class="ratings">
                 {% for rating in ratingsById[about] %}
                 <ul>
