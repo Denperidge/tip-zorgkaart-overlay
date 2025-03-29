@@ -1,0 +1,9 @@
+---
+# Solution based on https://github.com/11ty/eleventy/issues/1726#issuecomment-1253220142
+permalink: "/extension.css"
+---
+{% for data in fictionalTestData -%}
+.teaser:has(a[href$="/{{data.about}}"]) {
+    background-color: red;
+}
+{%- endfor %}    

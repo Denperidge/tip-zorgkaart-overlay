@@ -1,0 +1,13 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "@grimlink/eleventy-plugin-sass": "^1.0.3",
+    "eleventy-auto-cache-buster": "^0.8.1",
+    "sass": "^1.86.0"
+  }
+}
