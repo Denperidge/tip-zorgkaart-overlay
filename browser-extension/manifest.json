@@ -1,5 +1,5 @@
 {
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"name": "tip-zorgkaart-goggles",
 	"description": "Overlay the different TIP zorgkaart care providers with the positive & negative experiences of other trans people",
 	"version": "0.0.1",
@@ -9,22 +9,20 @@
 	"permissions": [
 		"scripting"
 	],
-	"background": {
-		"scripts": [
-			"background_script.js"
-		]
-	},
+	"host_permissions": [
+		"*://www.transgenderinfo.be/nl/zorgkaart/*"
+	],
 	"content_scripts": [
 		{
 			"matches": [
-				"http*://www.transgenderinfo.be/nl/zorgkaart/*"
+				"*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],
 			"js": [
 				"content_script.js"
+			],
+			"css": [
+				"zorgkaart.css"
 			]
 		}
-	],
-	"options_ui": {
-		"page": "options/index.html"
-	}
+	]
 }
