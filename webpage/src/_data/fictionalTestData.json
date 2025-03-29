@@ -1,29 +1,17 @@
 [
     { 
         "about" : "jac-oost-brabant",
-        "comments": [
-            {
-                "experience": 1,
-                "comment": "This is a positive comment, with a value of 1"
-            }
-        ]
+        "rating": 1,
+        "comment": "This is a positive comment, with a value of 1"
     },
     {
         "about": "jac-de-kempen",
-        "comments": [
-            {
-                "experience": 0,
-                "comment": "This is a neutral comment, with a value of 0"
-            }
-        ]
+        "rating": 0,
+        "comment": "This is a neutral comment, with a value of 0"
     },
     {
         "about": "caw-de-kempen",
-        "comments": [
-            {
-                "experience": -1,
-                "comment": "This is a negative comment, with a value of -1"
-            }
-        ]
+        "rating": -1,
+        "comment": "This is a negative comment, with a value of -1"
     }
 ]

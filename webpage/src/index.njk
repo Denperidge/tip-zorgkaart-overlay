@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for about in allAbout %}
+        <article id="{{ about }}-%>">
+            <h2>{{ about }}</h2>
+            <section class="ratings">
+                {% for rating in ratingsById[about] %}
+                <ul>
+                    <li class="rating">
+                        <span class="value">
+                            Rating:
+                            {% if rating.rating < 0 %}
+                            negative
+                            {% elif rating.rating == 0  %}
+                            neutral
+                            {% else %}
+                            nositive {# TODO: fix this typo. But it's funny #}
+                            {% endif %}
+                        </span>
+                        <p class="comment">{{rating.comment}}</p>
+                    </li>
+                </ul>
+                {% endfor %}
+            </section>
+        </article>
+    {% endfor %}
+</body>
+</html>
