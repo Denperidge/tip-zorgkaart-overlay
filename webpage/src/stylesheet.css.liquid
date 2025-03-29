@@ -5,4 +5,8 @@ permalink: "/stylesheet.css"
 .teaser:has(a[href$="/{{data.about}}"]) {
     background-color: red;
 }
-{%- endfor %}    
+{%- endfor %}
+
+{%- for entry in totalRatingById %}
+{{ entry }}
+{% endfor %}

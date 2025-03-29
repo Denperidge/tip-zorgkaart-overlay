@@ -26,6 +26,7 @@ export default {
             }
             out[about] += rating;
         })
+        console.log(out)
         return out;
     }
 }
