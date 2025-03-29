@@ -1,6 +1,6 @@
 { pkgs ? import <nixpkgs> {} }:
   pkgs.mkShell {
     buildInputs = with pkgs.buildPackages; [
-      web-ext
+      nodejs_23
     ];
   }

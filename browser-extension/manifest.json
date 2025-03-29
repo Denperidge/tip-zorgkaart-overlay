@@ -6,6 +6,9 @@
 	"icons": {
 		"64": "icons/icon.png"
 	},
+	"permissions": [
+		"scripting"
+	],
 	"background": {
 		"scripts": [
 			"background_script.js"
@@ -14,7 +17,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"*://*.mozilla.org/*"
+				"http*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],
 			"js": [
 				"content_script.js"
