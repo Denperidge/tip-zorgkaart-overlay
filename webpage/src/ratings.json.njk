@@ -4,7 +4,7 @@ pagination:
     size: 1
     alias: about
 eleventyComputed:
-    permalink: "/ratings/{{about}}.html"
+    permalink: "/ratings/{{about}}.json"
 ---
 [
 {%- for item in ratingsByAbout[about] -%}
