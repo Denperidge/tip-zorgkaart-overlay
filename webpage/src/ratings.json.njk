@@ -6,11 +6,11 @@ pagination:
 eleventyComputed:
     permalink: "/ratings/{{about}}.json"
 ---
-[
+{"colour":"{{ratingColourById[about]}}","ratings":[
 {%- for item in ratingsByAbout[about] -%}
     {"rating": "{{item.rating}}","comment": "{{item.comment}}"}
     {%- if not loop.last -%}
     ,
     {%- endif -%}
 {%- endfor -%}
-]
+]}
