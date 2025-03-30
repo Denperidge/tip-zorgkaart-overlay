@@ -1,3 +1,15 @@
+function totalRatingById(data) {
+    const out = {};
+    data.fictionalTestData.forEach((entry) => {
+        const { about, rating } = entry; 
+        if (!Object.keys(out).includes(about)) {
+            out[about] = 0;
+        }
+        out[about] += rating;
+    })
+    return out;
+}
+
 export default {
     allAbout: (data) => {
         return Array.from(
@@ -17,16 +29,12 @@ export default {
         })
         return out;
     },
-    totalRatingById: (data) => {
-        const out = {};
-        data.fictionalTestData.forEach((entry) => {
-            const { about, rating } = entry; 
-            if (!Object.keys(out).includes(about)) {
-                out[about] = 0;
-            }
-            out[about] += rating;
-        })
-        console.log(out)
-        return out;
+    totalRatingById: totalRatingById,
+    minMaxRating: (data) => {
+        const ratings = Object.values(totalRatingById(data));
+        return {
+            max: Math.max(...ratings),
+            min: Math.min(...ratings)
+        }
     }
 }
