@@ -10,7 +10,7 @@
 		"scripting"
 	],
 	"host_permissions": [
-		"*://www.transgenderinfo.be/nl/zorgkaart/*",
+		"*://www.transgenderinfo.be/nl/zorgkaart*",
 		"*://tipzo.neonpastel.net/*"
 	],
 	"content_scripts": [
@@ -32,7 +32,6 @@
 				"*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],
 			"js": [
-				"utils.js",
 				"details_page.js"
 			]
 		}
