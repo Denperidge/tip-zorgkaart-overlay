@@ -8,6 +8,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@grimlink/eleventy-plugin-sass": "^1.0.3",
+    "@picocss/pico": "^2.1.1",
     "eleventy-auto-cache-buster": "^0.8.1",
     "sass": "^1.86.0"
   }

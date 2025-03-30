@@ -1,0 +1,42 @@
+---
+permalink: "/stylesheet.css"
+---
+body {
+    font-size: 16px;;
+}
+
+header, main {
+    margin: auto;
+    width: 80%;
+}
+
+@media (max-width: 500px) {
+    header, main {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+body > header {
+    text-align: center;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+.care-provider header {
+    width: 100%;
+    background-color: hsl(56, 100%, 50%);
+}
+.care-provider h2 {
+    color: black;
+}
+
+{% for about, colour in ratingColourById -%}
+{% if colour %}
+#{{about}} header {
+    background-color: {{colour}};
+}
+{% endif %}
+{% endfor %}
