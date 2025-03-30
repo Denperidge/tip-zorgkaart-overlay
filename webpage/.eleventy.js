@@ -10,7 +10,6 @@ ratings.forEach(({about, rating, comment}) => {
     }
     ratingsByAbout[about].push({rating, comment});
 })
-console.log(ratingsByAbout)
 
 export const config = {
     dir: {

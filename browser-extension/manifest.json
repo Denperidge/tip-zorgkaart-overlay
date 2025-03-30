@@ -11,7 +11,7 @@
 	],
 	"host_permissions": [
 		"*://www.transgenderinfo.be/nl/zorgkaart/*",
-		"http://localhost:8080*"
+		"http://tipzo.neonpastel.net/*"
 	],
 	"content_scripts": [
 		{
@@ -29,6 +29,7 @@
 				"*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],
 			"js": [
+				"util.js",
 				"details_page.js"
 			]
 		}

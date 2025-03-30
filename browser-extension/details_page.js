@@ -1,13 +1,20 @@
 
 
-//fetch("http://localhost:8080/ratings/")
 async function init() {
     const path = (new URL(window.document.URL).pathname)
     const about = path.substring(path.lastIndexOf("/") + 1);
-    fetch("http://localhost:8080/ratings/" + about + ".json")
+    const parent = document.querySelector(".article-body");
+    const listElem = document.createElement("ul")
+
+    fetch("https://tipzo.neonpastel.net/ratings/" + about + ".json")
         .then(res => {
-            res.text().then(data => {
-                console.log(data);
+            res.json().then(ratings => {
+                for (let i = 0; i < ratings.length; i++) {
+                    const elem = document.createElement("li");
+                    elem.innerText = ratings[i].rating;
+                    listElem.appendChild(elem);
+                }
+                parent.appendChild(listElem)
             })
         })
         .catch(err => console.error)
@@ -16,4 +23,4 @@ async function init() {
 init();
 
 
-//document.querySelector(".article-body").appendChild
+//
