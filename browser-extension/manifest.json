@@ -17,6 +17,7 @@
 		{
 			"matches": [
 				"*://www.transgenderinfo.be/nl/zorgkaart",
+				"*://www.transgenderinfo.be/nl/zorgkaart?*",
 				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
 			],
 			"css": [
