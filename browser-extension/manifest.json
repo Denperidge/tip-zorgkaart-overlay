@@ -1,6 +1,6 @@
 {
 	"manifest_version": 3,
-	"name": "tip-zorgkaart-goggles",
+	"name": "tip-zorgkaart-overlay",
 	"description": "Overlay the different TIP zorgkaart care providers with the positive & negative experiences of other trans people",
 	"version": "0.0.1",
 	"icons": {
