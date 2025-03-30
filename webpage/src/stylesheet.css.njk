@@ -33,6 +33,21 @@ article {
     color: black;
 }
 
+.positive::marker {
+    color: rgb(0, 198, 0);
+    content: "+ ";
+}
+
+.neutral::marker {
+    color: yellow;
+    content: "~ ";
+}
+
+.negative::marker {
+    color: red;
+    content: "- ";
+}
+
 {% for about, colour in ratingColourById -%}
 {% if colour %}
 #{{about}} header {
