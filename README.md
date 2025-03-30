@@ -1,6 +1,6 @@
 # Transgender Infopunt Zorgkaart Overlay
 
-This is the monorepo for the TIP Zorgkaart Overlay: a [webpage](webpage/) and [browser extension](browser-extension/) that overlay/display the positive & negative experiences of other trans people about [TIP](https://www.transgenderinfo.be/nl/zorgkaart)'s different care providers.
+This is the monorepo for the TIP Zorgkaart Overlay: a volunteer-run [webpage](webpage/) and [browser extension](browser-extension/) that overlay/display the positive & negative experiences of other trans people about [TIP](https://www.transgenderinfo.be/nl/zorgkaart)'s different care providers.
 
 > Hopefully obvious note: the data provided here is by and for trans people *looking for a safe place for care*. Using this data for the sake of harassing care providers, no matter their rating, is counter-intuitive to the real long-term improvements needed for trans care. 
 
