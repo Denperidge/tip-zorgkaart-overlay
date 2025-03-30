@@ -1,6 +1,4 @@
-import * as meow from "../../../browser-extension/util.js";
-console.log("---")
-console.log(meow)
+import { ratingColourById, totalRatingById } from "./utils.js";
 
 export default {
     allAbout: (data) => {
@@ -21,6 +19,10 @@ export default {
         })
         return out;
     },
-    totalRatingById: totalRatingById,
-    ratingColourById
+    totalRatingById: (data) => {
+        return totalRatingById(data.fictionalTestData);
+    },
+    ratingColourById: (data) => {
+        return ratingColourById(data.fictionalTestData);
+    }
 }

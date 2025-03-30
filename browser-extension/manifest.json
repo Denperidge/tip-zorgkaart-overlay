@@ -29,7 +29,7 @@
 				"*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],
 			"js": [
-				"util.js",
+				"utils.js",
 				"details_page.js"
 			]
 		}

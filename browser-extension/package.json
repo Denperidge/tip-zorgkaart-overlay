@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48"
+    "start": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48",
+    "build:shared": "node ../shared/generate.js"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^120.0.4",
