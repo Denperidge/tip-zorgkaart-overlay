@@ -18,6 +18,11 @@ async function init() {
                     elem.innerText = `[${prefix}] ${comment}`;
                     listElem.appendChild(elem);
                 }
+                const title = document.createElement("h2")
+                title.innerText = "Ratings";
+                title.style.backgroundColor = data.colour
+                parent.appendChild(title)
+
                 parent.appendChild(listElem)
             })
         })
