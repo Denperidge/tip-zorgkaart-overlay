@@ -1,0 +1,12 @@
+---
+# Solution based on https://github.com/11ty/eleventy/issues/1726#issuecomment-1253220142
+permalink: "/extension.css"
+---
+{% for about, colour in ratingColourById -%}
+{% if colour %}
+.teaser:has(a[href$="/{{about}}"]) {
+    background-color: {{colour}};
+}
+{% endif %}
+{%- endfor %}
+

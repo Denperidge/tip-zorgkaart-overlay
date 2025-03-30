@@ -23,5 +23,30 @@
         "about": "caw-de-kempen",
         "rating": 1,
         "comment": "And now a positive one, +1"
+    },
+    {
+        "about": "caw-de-kempen",
+        "rating": -1,
+        "comment": "1 Another negative comment, with a value of -1"
+    },
+    {
+        "about": "caw-de-kempen",
+        "rating": -1,
+        "comment": "2 Another negative comment, with a value of -1"
+    },
+    {
+        "about": "jac-halle-vilvoorde",
+        "rating": -1,
+        "comment": "A negative comment, with a value of -1"
+    },
+    {
+        "about": "jac-limburg",
+        "rating": 1,
+        "comment": "Aaaaaa"
+    },
+    {
+        "about": "jac-limburg",
+        "rating": 1,
+        "comment": "A postibve"
     }
 ]
