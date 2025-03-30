@@ -10,18 +10,25 @@
 		"scripting"
 	],
 	"host_permissions": [
-		"*://www.transgenderinfo.be/nl/zorgkaart/*"
+		"*://www.transgenderinfo.be/nl/zorgkaart/*",
+		"http://localhost:8080*"
 	],
 	"content_scripts": [
 		{
 			"matches": [
-				"*://www.transgenderinfo.be/nl/zorgkaart*"
-			],
-			"js": [
-				"content_script.js"
+				"*://www.transgenderinfo.be/nl/zorgkaart",
+				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
 			],
 			"css": [
 				"zorgkaart.css"
+			]
+		},
+		{
+			"matches": [
+				"*://www.transgenderinfo.be/nl/zorgkaart/*"
+			],
+			"js": [
+				"details_page.js"
 			]
 		}
 	]
