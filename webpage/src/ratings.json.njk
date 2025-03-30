@@ -1,0 +1,16 @@
+---
+pagination:
+    data: ratingsByAbout
+    size: 1
+    alias: about
+eleventyComputed:
+    permalink: "/ratings/{{about}}.html"
+---
+[
+{%- for item in ratingsByAbout[about] -%}
+    {"rating": "{{item.rating}}","comment": "{{item.comment}}"}
+    {%- if not loop.last -%}
+    ,
+    {%- endif -%}
+{%- endfor -%}
+]

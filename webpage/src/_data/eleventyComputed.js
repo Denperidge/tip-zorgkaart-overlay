@@ -12,7 +12,6 @@ function totalRatingById(data) {
 
 function minMaxRating(ratings) { 
     const ratingValues = Object.values(ratings);
-    console.log(ratingValues)
     return {
         max: Math.max(...ratingValues),
         min: Math.min(...ratingValues)
