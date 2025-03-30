@@ -11,7 +11,7 @@
 	],
 	"host_permissions": [
 		"*://www.transgenderinfo.be/nl/zorgkaart/*",
-		"http://tipzo.neonpastel.net/*"
+		"*://tipzo.neonpastel.net/*"
 	],
 	"content_scripts": [
 		{
@@ -25,6 +25,9 @@
 			]
 		},
 		{
+			"exclude_matches": [
+				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
+			],
 			"matches": [
 				"*://www.transgenderinfo.be/nl/zorgkaart/*"
 			],

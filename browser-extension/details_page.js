@@ -8,10 +8,14 @@ async function init() {
 
     fetch("https://tipzo.neonpastel.net/ratings/" + about + ".json")
         .then(res => {
-            res.json().then(ratings => {
+            res.json().then(data => {
+                document.querySelector(".sidebar").setAttribute("style", "background-color: " + data.colour)
+                const ratings = data.ratings;
                 for (let i = 0; i < ratings.length; i++) {
                     const elem = document.createElement("li");
-                    elem.innerText = ratings[i].rating;
+                    const {rating, comment} = ratings[i];
+                    const prefix = rating < 0 ? "-" : rating == 0 ? "~" : "+";;
+                    elem.innerText = `[${prefix}] ${comment}`;
                     listElem.appendChild(elem);
                 }
                 parent.appendChild(listElem)
@@ -21,6 +25,3 @@ async function init() {
 }
 
 init();
-
-
-//
