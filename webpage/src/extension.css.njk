@@ -4,7 +4,7 @@ permalink: "/extension.css"
 ---
 {% for about, colour in ratingColourById -%}
 {% if colour %}
-.teaser:has(a[href$="/{{about}}"]) {
+.teaser:has(a[href$="/{{about}}"]), .info-window-map:has(a[href$="/{{about}}"]) {
     background-color: {{colour}};
 }
 {% endif %}

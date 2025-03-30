@@ -15,7 +15,7 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"*://www.transgenderinfo.be/nl/zorgkaart/*"
+				"*://www.transgenderinfo.be/nl/zorgkaart*"
 			],
 			"js": [
 				"content_script.js"
