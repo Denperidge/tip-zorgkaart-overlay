@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48",
-    "build": "npm run build:firefox",
-    "build:firefox": "web-ext build"
+    "build": "npm run build:zip",
+    "build:zip": "web-ext build --overwrite-dest"
   },
   "devDependencies": {
     "@types/firefox-webext-browser": "^120.0.4",
