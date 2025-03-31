@@ -3,6 +3,11 @@
 	"name": "tip-zorgkaart-overlay",
 	"description": "Overlay the different TIP zorgkaart care providers with the positive & negative experiences of other trans people",
 	"version": "0.0.1",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "tipzo@neonpastel.net"
+		}
+	},
 	"icons": {
 		"64": "icons/icon.png"
 	},
