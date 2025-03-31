@@ -30,4 +30,4 @@ jobs:
       - name: Upload to GitHub Releases
         uses: ncipollo/release-action@v1.16.0
         with:
-          artifacts: web-ext-artifacts/*.zip
+          artifacts: browser-extension/web-ext-artifacts/*.zip,web-ext-artifacts/*.zip
