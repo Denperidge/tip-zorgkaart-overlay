@@ -1,0 +1,34 @@
+name: Build & release web extension
+
+on:
+  push:
+    tags: [ "*.*.*" ]
+  # Allows this workflow to be called from other workflows
+  workflow_call:
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./browser-extension
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Select latest ref instead of event trigger, in case this is triggered by another event
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v4
+          
+      - name: Install pre-requirements
+        run: npm ci
+
+      - name: Build web extension ZIP
+        run: npm run build
+      
+      - name: Upload to GitHub Releases
+        uses: ncipollo/release-action@v1.12.0
+        with:
+          artifacts: web-ext-artifacts/*
