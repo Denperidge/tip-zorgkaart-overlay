@@ -1,6 +1,9 @@
 {
   "scripts": {
-    "start": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48",
+    "start": "npm run start:ff",
+    "start:ff": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48",
+    "start:chrome": "web-ext run -u https://www.transgenderinfo.be/nl/zorgkaart/lijst?f%5B0%5D=types%3A48 --target chromium",
+    "start:c": "npm run start:chrome",
     "build": "npm run build:zip",
     "build:zip": "web-ext build --overwrite-dest"
   },
