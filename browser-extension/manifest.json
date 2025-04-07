@@ -5,7 +5,7 @@
 	"version": "0.0.2",
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "tipzo@neonpastel.net"
+			"id": "tipzo.browser-extension@neonpastel.net"
 		}
 	},
 	"icons": {
@@ -32,11 +32,11 @@
 			]
 		},
 		{
-			"exclude_matches": [
-				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
-			],
 			"matches": [
 				"*://www.transgenderinfo.be/nl/zorgkaart/*"
+			],
+			"exclude_matches": [
+				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
 			],
 			"js": [
 				"details_page.js"
