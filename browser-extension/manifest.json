@@ -2,7 +2,7 @@
 	"manifest_version": 3,
 	"name": "tip-zorgkaart-overlay",
 	"description": "Overlay the different TIP zorgkaart care providers with the positive & negative experiences of other trans people",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"browser_specific_settings": {
 		"gecko": {
 			"id": "tipzo@neonpastel.net"
@@ -15,8 +15,7 @@
 		"scripting"
 	],
 	"host_permissions": [
-		"*://www.transgenderinfo.be/nl/zorgkaart*",
-		"*://tipzo.neonpastel.net/*"
+		"*://www.transgenderinfo.be/nl/zorgkaart*"
 	],
 	"content_scripts": [
 		{
@@ -27,6 +26,9 @@
 			],
 			"css": [
 				"zorgkaart.css"
+			],
+			"js": [
+				"css_fallback.js"
 			]
 		},
 		{
