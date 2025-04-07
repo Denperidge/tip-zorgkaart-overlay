@@ -2,6 +2,9 @@
 # Solution based on https://github.com/11ty/eleventy/issues/1726#issuecomment-1253220142
 permalink: "/extension.css"
 ---
+title {
+    background-position-x: 37%;
+}
 {% for about, colour in ratingColourById -%}
 {% if colour %}
 .teaser:has(a[href$="/{{about}}"]), .info-window-map:has(a[href$="/{{about}}"]) {
