@@ -1,3 +1,8 @@
+/**
+ * 
+ * @param {Array<Object>} ratings 
+ * @returns {{id: number}}
+ */
 function totalRatingById(ratings) {
     const out = {};
    ratings.forEach((entry) => {
@@ -9,6 +14,11 @@ function totalRatingById(ratings) {
    })
    return out;
 }
+/**
+ * 
+ * @param {Array<Object>} ratingsArray 
+ * @returns {{key: string}}
+ */
 function ratingColourById(ratingsArray) {
    const ratings = totalRatingById(ratingsArray);
    const out = {};
@@ -62,5 +72,22 @@ export default {
     },
     ratingColourById: (data) => {
         return ratingColourById(data.fictionalTestData);
+    },
+    ratingSummary: (data) => {
+        const relevantData = data.fictionalTestData;
+        
+        const colours = ratingColourById(relevantData);
+        const totals = totalRatingById(relevantData);
+        console.log(totals)
+        
+        const summary = Object.keys(colours).map(id => {
+            const out = {
+                total: totals[id]
+            }
+            const colour = colours[id];
+            if (colour) { out.colour = colour; }
+            return out;
+        });
+        return summary
     }
 }

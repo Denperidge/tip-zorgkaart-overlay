@@ -34,5 +34,7 @@ export default function (eleventyConfig) {
         outputStyle: "compressed"
     });
 
+    eleventyConfig.addFilter("stringify", (value) => {return JSON.stringify(value)});
+
     eleventyConfig.addPassthroughCopy("src/static/")
 }
