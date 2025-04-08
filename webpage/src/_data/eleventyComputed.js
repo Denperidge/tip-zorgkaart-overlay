@@ -78,15 +78,16 @@ export default {
         
         const colours = ratingColourById(relevantData);
         const totals = totalRatingById(relevantData);
-        console.log(totals)
         
-        const summary = Object.keys(colours).map(id => {
+        const summary = {};
+
+        Object.keys(colours).forEach(id => {
             const out = {
                 total: totals[id]
             }
             const colour = colours[id];
             if (colour) { out.colour = colour; }
-            return out;
+            summary[id] = out;
         });
         return summary
     }
