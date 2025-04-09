@@ -27,8 +27,7 @@
 				"zorgkaart.css"
 			],
 			"js": [
-				"css_fallback.js",
-				"cache.js",
+				"shared.js",
 				"page_map.js"
 			]
 		},
@@ -40,9 +39,8 @@
 				"zorgkaart.css"
 			],
 			"js": [
-				"css_fallback.js",
-				"cache.js",
-				"list_page.js"
+				"shared.js",
+				"page_list.js"
 			]
 		},
 		{
@@ -56,8 +54,8 @@
 				"zorgkaart.css"
 			],
 			"js": [
-				"css_fallback.js",
-				"details_page.js"
+				"shared.js",
+				"page_details.js"
 			]
 		}
 	]

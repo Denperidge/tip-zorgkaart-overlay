@@ -1,3 +1,12 @@
+function loadCssIfNeeded() {
+    if (getComputedStyle(document.querySelector("title")).backgroundPositionX != "37%") {
+        const link = document.createElement("link");
+        link.setAttribute("href", "https://tipzo.neonpastel.net/extension.css")
+        link.setAttribute("rel", "stylesheet");
+        document.head.appendChild(link);
+    }
+}
+
 async function summaryFromCache(callback) {
     let summary = sessionStorage.getItem("summary");
     if (summary) {
@@ -12,9 +21,7 @@ async function summaryFromCache(callback) {
             .catch((err) => {
                 if (err) { console.error(err); }
             })
-            
     }
-
 }
 
-init();
+loadCssIfNeeded();
