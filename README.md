@@ -9,10 +9,10 @@ There are a few moving parts to this project:
 - A self-developed [webpage](webpage/) that...
     - allows people to view aforementioned experiences
     - generates CSS & specific JSON files for the extension's live updating
-- A self-developed browser extension that...
+- A self-developed [browser extension](browser-extension/) that...
     - Provides a visual overlay over the care providers on TIP's website
     - Adds the aforementioned ratings from other people to the detail page [(example detail page)](https://www.transgenderinfo.be/nl/zorgkaart/jac-oost-brabant)
 - A self-hosted questionnaire platform ([deck9's input](https://github.com/deck9/input)) that...
     - ... allows people to share their experiences with their care providers
-    - ... allows the volunteers that run this to pseudonymise & parse the data
-    - ... allows the volunteers that run to assist with any requests by submitters (changes, removal...)
+    - ... allows the volunteers that run the project to pseudonymise & parse the data
+    - ... allows the volunteers that run the project to assist with any requests by submitters (changes, removal...)
