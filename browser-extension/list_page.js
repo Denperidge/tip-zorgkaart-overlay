@@ -12,26 +12,4 @@ function addRatingBadges(summaryRatings) {
     })
 }
 
-
-async function init() {
-    let summary = sessionStorage.getItem("summary")
-    if (summary) {
-        console.log("Summary from storage...");
-        addRatingBadges(JSON.parse(summary));
-    } else {        
-        console.log("Summary from tipzo...")
-        fetch("https://tipzo.neonpastel.net/summary.json")
-            .then(async (res) => {
-                const ratings = await res.json();
-                sessionStorage.setItem("summary", JSON.stringify(ratings));
-                addRatingBadges(ratings)    
-            })
-            .catch((err) => {
-                if (err) { console.error(err); }
-            })
-            
-    }
-
-}
-
-init();
+summaryFromCache(addRatingBadges);
