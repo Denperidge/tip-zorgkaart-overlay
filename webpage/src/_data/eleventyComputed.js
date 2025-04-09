@@ -70,6 +70,27 @@ export default {
     totalRatingById: (data) => {
         return totalRatingById(data.fictionalTestData);
     },
+    totalRatingsByIdSummary: (data) => {
+        const ratings = totalRatingById(data.fictionalTestData);
+        const out = {};
+        const entries = Object.entries(ratings);
+        entries.forEach(entry => {
+            const [id, value] = entry;
+            let newValue;
+            
+            if (value < 0) {
+                newValue = value.toString();
+            } else if (value == 0) {
+                newValue = "neutral"
+            } else {
+                newValue = `+${value}`;
+            }
+
+            out[id] = newValue;
+            
+        });
+        return out;
+    },
     ratingColourById: (data) => {
         return ratingColourById(data.fictionalTestData);
     },
