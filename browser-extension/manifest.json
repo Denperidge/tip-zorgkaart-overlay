@@ -39,7 +39,11 @@
 			"exclude_matches": [
 				"*://www.transgenderinfo.be/nl/zorgkaart/lijst*"
 			],
+			"css": [
+				"zorgkaart.css"
+			],
 			"js": [
+				"css_fallback.js",
 				"details_page.js"
 			]
 		}

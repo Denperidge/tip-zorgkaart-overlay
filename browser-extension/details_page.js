@@ -20,9 +20,14 @@ async function init() {
                 }
                 const title = document.createElement("h2")
                 title.innerText = "Ratings";
-                title.style.backgroundColor = data.colour
+                
+                const ratingBadge = document.createElement("p");
+                ratingBadge.classList.add("rating-badge")
+                ratingBadge.innerText = "Rating: " + data.summary;
+                ratingBadge.style.backgroundColor = data.colour
+                
                 parent.appendChild(title)
-
+                parent.appendChild(ratingBadge);
                 parent.appendChild(listElem)
             })
         })
