@@ -13,9 +13,16 @@ title {
     border: 1px solid black;
     border-radius: 10px;
 }
+
+.info-window-map .rating-badge {
+    color: black;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
 {% for about, colour in ratingColourById -%}
 {% if colour %}
-.teaser:has(a[href$="/{{about}}"]) .rating-badge {
+.teaser:has(a[href$="/{{about}}"]) .rating-badge, .info-window-map:has(a[href$="/{{about}}"]) .rating-badge {
     background-color: {{colour}};
 }
 {% endif %}
