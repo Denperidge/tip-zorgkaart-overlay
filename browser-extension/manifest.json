@@ -28,7 +28,8 @@
 				"zorgkaart.css"
 			],
 			"js": [
-				"css_fallback.js"
+				"css_fallback.js",
+				"list_page.js"
 			]
 		},
 		{

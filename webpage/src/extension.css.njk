@@ -5,22 +5,18 @@ permalink: "/extension.css"
 title {
     background-position-x: 37%;
 }
-{% for about, colour in ratingColourById -%}
-{% if colour %}
-/*
-.teaser:has(a[href$="/{{about}}"]), .info-window-map:has(a[href$="/{{about}}"]) {
-    background-color: {{colour}};
-}
-*/
-.teaser:has(a[href$="/{{about}}"]) .teaser-author::after {
+.rating-badge {
     display: block;
     margin-top: 5px;
     padding: 5px;
     padding-left: 1em;
     border: 1px solid black;
     border-radius: 10px;
+}
+{% for about, colour in ratingColourById -%}
+{% if colour %}
+.teaser:has(a[href$="/{{about}}"]) .rating-badge {
     background-color: {{colour}};
-    content: "Rating: {{totalRatingById[about]}}";
 }
 {% endif %}
 {%- endfor %}
