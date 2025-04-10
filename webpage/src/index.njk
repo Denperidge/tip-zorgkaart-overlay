@@ -1,5 +1,6 @@
 ---
 layout: layout.njk
+title: Home
 ---
 <header>
     <h1>TIP Zorgkaart Overlay</h1>
@@ -11,27 +12,12 @@ layout: layout.njk
     <hr>
 </header>
 <main>
-    <h2>Ratings</h2>
-    {% for about in allAbout %}
-    <article id="{{ about }}" class="care-provider">
-        <header>
-            <h2>{{ about }} ({{ totalRatingById[about] }})</h2>
-        </header>
-        <ul class="ratings">
-            {% for rating in ratingsById[about] %}
-                {% if rating.rating < 0 %}
-                    {% set ratingText = "negative"  %}
-                {% elif rating.rating == 0  %}
-                    {% set ratingText = "neutral"  %}
-                {% else %}
-                    {% set ratingText = "positive"  %}
-                {% endif %}
-                <li class="rating {{ratingText}}">
-                    <span class="value">Rating: {{ratingText}}</span>
-                <p class="comment">{{rating.comment}}</p>
-            </li>
-            {% endfor %}
-        </ul>
-    </article>
-    {% endfor %}
+    <h2>Care providers</h2>
+    <ul class="care-providers">
+        {%- for about in allAbout -%}
+        <li>
+            <a href="/ratings/{{about}}">{{about}}</a>
+        </li>
+        {%- endfor -%}
+    </ul>
 </main>

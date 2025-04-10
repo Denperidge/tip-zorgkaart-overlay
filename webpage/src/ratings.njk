@@ -1,0 +1,32 @@
+---
+layout: layout.njk
+pagination:
+    data: ratingsByAbout
+    size: 1
+    alias: about
+eleventyComputed:
+    permalink: "/ratings/{{about}}/index.html"
+    title: "{{about}}"
+---
+<h1>{{about}}</h1>
+
+<article id="{{ about }}" class="care-provider">
+    <header>
+        <h2>{{ about }} ({{ totalRatingById[about] }})</h2>
+    </header>
+    <ul class="ratings">
+        {% for rating in ratingsById[about] %}
+            {% if rating.rating < 0 %}
+                {% set ratingText = "negative"  %}
+            {% elif rating.rating == 0  %}
+                {% set ratingText = "neutral"  %}
+            {% else %}
+                {% set ratingText = "positive"  %}
+            {% endif %}
+            <li class="rating {{ratingText}}">
+                <span class="value">Rating: {{ratingText}}</span>
+            <p class="comment">{{rating.comment}}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</article>
