@@ -8,25 +8,28 @@ eleventyComputed:
     permalink: "/ratings/{{about}}/index.html"
     title: "{{about}}"
 ---
-<h1>{{about}}</h1>
+<header>
+    <h1><a href="/">TIP Zorgkaart Overlay</a></h1>
+    <h2>Ratings for <a href="https://www.transgenderinfo.be/nl/zorgkaart/{{about}}">{{about}}</a></h2>
+</header>
 
 <article id="{{ about }}" class="care-provider">
     <header>
-        <h2>{{ about }} ({{ totalRatingById[about] }})</h2>
+        <h2>Total: {% include "rating-badge.njk" %}</h2>
     </header>
     <ul class="ratings">
         {% for rating in ratingsById[about] %}
             {% if rating.rating < 0 %}
-                {% set ratingText = "negative"  %}
+                {% set ratingText = "- Negative"  %}
             {% elif rating.rating == 0  %}
-                {% set ratingText = "neutral"  %}
+                {% set ratingText = "~ Neutral"  %}
             {% else %}
-                {% set ratingText = "positive"  %}
+                {% set ratingText = "+ Positive"  %}
             {% endif %}
             <li class="rating {{ratingText}}">
-                <span class="value">Rating: {{ratingText}}</span>
+                <span class="value">[{{ratingText}}]</span>
             <p class="comment">{{rating.comment}}</p>
-        </li>
+            </li>
         {% endfor %}
     </ul>
 </article>

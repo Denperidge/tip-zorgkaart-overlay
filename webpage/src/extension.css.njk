@@ -6,6 +6,7 @@ title {
     background-position-x: 37%;
 }
 .rating-badge {
+    color: black;
     display: block;
     margin-top: 5px;
     padding: 5px;
@@ -22,7 +23,7 @@ title {
 
 {% for about, colour in ratingColourById -%}
 {% if colour %}
-.teaser:has(a[href$="/{{about}}"]) .rating-badge, .info-window-map:has(a[href$="/{{about}}"]) .rating-badge {
+.teaser:has(a[href$="/{{about}}"]) .rating-badge, .info-window-map:has(a[href$="/{{about}}"]) .rating-badge, .{{about}} .rating-badge {
     background-color: {{colour}};
 }
 {% endif %}

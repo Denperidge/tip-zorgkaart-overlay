@@ -3,7 +3,7 @@ layout: layout.njk
 title: Home
 ---
 <header>
-    <h1>TIP Zorgkaart Overlay</h1>
+    <h1><a href="/">TIP Zorgkaart Overlay</a></h1>
     <p>A volunteer-run a webpage and browser extension
         that overlay/display the positive & negative experiences
         of other trans people about <a href="https://www.transgenderinfo.be/nl/zorgkaart">TIP</a>'s different care providers.
@@ -13,10 +13,13 @@ title: Home
 </header>
 <main>
     <h2>Care providers</h2>
-    <ul class="care-providers">
+    <ul id="care-providers">
         {%- for about in allAbout -%}
-        <li>
-            <a href="/ratings/{{about}}">{{about}}</a>
+        <li class="{{about}}">
+            <a href="/ratings/{{about}}">
+                {{about}}
+                {% include "rating-badge.njk" %}
+            </a>
         </li>
         {%- endfor -%}
     </ul>
