@@ -1,46 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/stylesheet.css">
-    <link rel="stylesheet" href="/{{picoVersion}}">
-</head>
-<body>
-    <header>
-        <h1>TIP Zorgkaart Overlay</h1>
-        <p>A volunteer-run a webpage and browser extension
-            that overlay/display the positive & negative experiences
-            of other trans people about <a href="https://www.transgenderinfo.be/nl/zorgkaart">TIP</a>'s different care providers.
-        </p>
-        <p>You can view the <a href="https://github.com/Denperidge/tip-zorgkaart-overlay">source code on GitHub</a>.</p>
-        <hr>
-    </header>
-    <main>
-        <h2>Ratings</h2>
-        {% for about in allAbout %}
-        <article id="{{ about }}" class="care-provider">
-            <header>
-                <h2>{{ about }} ({{ totalRatingById[about] }})</h2>
-            </header>
-            <ul class="ratings">
-                {% for rating in ratingsById[about] %}
-                    {% if rating.rating < 0 %}
-                        {% set ratingText = "negative"  %}
-                    {% elif rating.rating == 0  %}
-                        {% set ratingText = "neutral"  %}
-                    {% else %}
-                        {% set ratingText = "positive"  %}
-                    {% endif %}
-                    <li class="rating {{ratingText}}">
-                        <span class="value">Rating: {{ratingText}}</span>
-                    <p class="comment">{{rating.comment}}</p>
-                </li>
-                {% endfor %}
-            </ul>
-        </article>
-        {% endfor %}
-    </main>
-</body>
-</html>
+---
+layout: layout.njk
+---
+<header>
+    <h1>TIP Zorgkaart Overlay</h1>
+    <p>A volunteer-run a webpage and browser extension
+        that overlay/display the positive & negative experiences
+        of other trans people about <a href="https://www.transgenderinfo.be/nl/zorgkaart">TIP</a>'s different care providers.
+    </p>
+    <p>You can view the <a href="https://github.com/Denperidge/tip-zorgkaart-overlay">source code on GitHub</a>.</p>
+    <hr>
+</header>
+<main>
+    <h2>Ratings</h2>
+    {% for about in allAbout %}
+    <article id="{{ about }}" class="care-provider">
+        <header>
+            <h2>{{ about }} ({{ totalRatingById[about] }})</h2>
+        </header>
+        <ul class="ratings">
+            {% for rating in ratingsById[about] %}
+                {% if rating.rating < 0 %}
+                    {% set ratingText = "negative"  %}
+                {% elif rating.rating == 0  %}
+                    {% set ratingText = "neutral"  %}
+                {% else %}
+                    {% set ratingText = "positive"  %}
+                {% endif %}
+                <li class="rating {{ratingText}}">
+                    <span class="value">Rating: {{ratingText}}</span>
+                <p class="comment">{{rating.comment}}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </article>
+    {% endfor %}
+</main>
